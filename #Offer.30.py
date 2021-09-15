@@ -25,10 +25,3 @@ class MinStack:
 
 
 obj = MinStack()
-obj.push(-2)
-obj.push(0)
-obj.push(-3)
-obj.min()
-obj.pop()
-obj.top()
-obj.min()

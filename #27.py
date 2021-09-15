@@ -33,4 +33,5 @@ num = [0, 1, 2, 2, 3, 0, 4, 2]
 val1 = 2
 # result = obj.removeElement1(num, val1)
 result = obj.removeElement2(num, val1)
+# 还有一个,发现双指针和优化双指针用时并没有差很多,只不过当目标元素数量少且数组大的时候有好的效果
 print(result)

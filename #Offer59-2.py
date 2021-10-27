@@ -1,4 +1,4 @@
-# Offer.59-2 队列的最大值
+# Offer59-2.队列的最大值
 # 请定义一个队列并实现函数 max_value 得到队列里的最大值,要求函数 max_value, push_back,
 # pop_front 的均摊时间复杂度都是 O(1).
 # 解题思路

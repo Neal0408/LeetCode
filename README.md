@@ -6,20 +6,22 @@ LeetCode 学习记录
  先把做的题做了个分类。最开始还是数据结构做的比较多。
 
 ---
-   * [线性数据结构](#线性数据结构)
-      * [数组 Array](#数组-array)
-      * [链表 Linked List](#链表-linked-list)
-      * [栈 Stack](#栈-stack)
-      * [队列 Queue](#队列-queue)
-   * [非线性数据结构](#非线性数据结构)
-      * [树 Tree](#树-tree)
-      * [堆 Heap](#堆-heap)
-      * [哈希表 Hash Table](#哈希表-hash-table)
-      * [图 Graph](#图-graph)
-   * [Python的数据结构](#python的数据结构)
-      * [基本数据结构](#基本数据结构)
-      * [Collections模块中的数据结构](#collections模块中的数据结构)
-      * [其他](#其他)
+* [线性数据结构](#线性数据结构)
+  * [数组 Array](#数组-array)
+  * [链表 Linked List](#链表-linked-list)
+  * [栈 Stack](#栈-stack)
+  * [队列 Queue](#队列-queue)
+* [非线性数据结构](#非线性数据结构)
+  * [树 Tree](#树-tree)
+  * [堆 Heap](#堆-heap)
+  * [哈希表 Hash Table](#哈希表-hash-table)
+  * [图 Graph](#图-graph)
+* [Python的数据结构](#python的数据结构)
+  * [基本数据结构](#基本数据结构)
+  * [Collections模块中的数据结构](#collections模块中的数据结构)
+  * [其他](#其他)
+* [算法](#算法)
+
 ---
 
 > ! 是还没做的, * 是还有其他做法的.
@@ -113,7 +115,7 @@ LeetCode 学习记录
 
 *   堆队列/优先队列 heapq 默认大根堆
 
-# 算法
+## 算法
 
 *   双指针算法 Two Pointer
     *   !141.环形链表

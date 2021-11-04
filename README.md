@@ -5,7 +5,7 @@ LeetCode 学习记录
  
  先把做的题做了个分类。最开始还是数据结构做的比较多。
 
----
+
 * [线性数据结构](#线性数据结构)
   * [数组 Array](#数组-array)
   * [链表 Linked List](#链表-linked-list)
@@ -36,7 +36,7 @@ LeetCode 学习记录
   * [前缀树 Trie](#前缀树-trie)
   * [拓扑排序 Topologic Sort](#拓扑排序-topologic-sort)
   * [数学 Math](#数学-math)
----
+
 
 ## 线性数据结构
 

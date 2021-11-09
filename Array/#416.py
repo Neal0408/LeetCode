@@ -5,7 +5,8 @@
 # 1.最开始想到的是所有元素和的一半为目标值,然后求出和为目标值的组合.最开始做的时候是按目标值
 # 减去第一个元素后是否存在于列表中,提交发现只通过了 96 测试用例,没有考虑到减去后的目标值是由
 # 剩余多个数组元素的组合构成的.最后做出来的也有点奇怪.更像暴力解法.
-# 2.后来了解到这个是个0-1背包问题.转移方程,二维数组的最后一项则为最终的答案.
+# 2.后来了解到这个是个0-1背包问题.转移方程,二维数组的最后一项则为最终的答案.问题比较经典可以
+# 多看一看.
 from typing import List
 
 
@@ -58,7 +59,22 @@ class Solution:
                     dp[i][j] = dp[i - 1][j]
         return dp[n - 1][target]
 
+    def canPartition3(self, nums: List[int]) -> bool:
+        n = len(nums)
+        if n < 2:
+            return False
+        total = sum(nums)
+        if total % 2 != 0:
+            return False
+        
+        target = total // 2
+        dp = [True] + [False] * target
+        for i, num in enumerate(nums):
+            for j in range(target, num - 1, -1):
+                dp[j] = dp[j] or dp[j - num]
+        return dp[target]
+
 
 obj = Solution()
-a = [9, 5]
-res = obj.canPartition2(a)
+a = [1, 5, 7, 9]
+res = obj.canPartition3(a)

@@ -11,7 +11,7 @@ from typing import List
 
 class Solution:
 
-    # 方法一 求和做差
+    # 方法一 求和后做差
     def missingNumber(self, nums: List[int]) -> int:
         # len + 1 是原来该有的长度。
         n = len(nums) + 1

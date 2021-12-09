@@ -10,6 +10,7 @@ from typing import List
 
 class Solution:
 
+    # 方法一 集合遍历
     def findRepeatNumber(self, nums: List[int]) -> int:
         set1 = set()
         for i in nums:
@@ -19,6 +20,7 @@ class Solution:
                 return i
         return -1
 
+    # 方法二 原地交换
     def findRepeatNumber2(self, nums: List[int]) -> int:
         i = 0
         while i < len(nums):

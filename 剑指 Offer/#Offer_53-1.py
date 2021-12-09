@@ -48,4 +48,3 @@ class Solution:
 
 
 obj = Solution()
-obj.search2([5, 7, 8, 8, 8, 9], 8)

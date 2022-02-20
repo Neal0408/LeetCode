@@ -14,9 +14,9 @@ class Solution:
         def build(s: str) -> str:
             ret = list()
             for ch in s:
-                if ch != '#':
+                if ch != "#":
                     ret.append(ch)
-                else:
+                elif ret:
                     ret.pop()
             return "".join(ret)
 

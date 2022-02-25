@@ -25,7 +25,7 @@ class Solution:
     def backspaceCompare2(self, S: str, T: str) -> bool:
         i, j = len(S) - 1, len(T) - 1
         skipS = skipT = 0
-        while i >= 0 or j >=0:
+        while i >= 0 or j >= 0:
             while i >= 0:
                 if S[i] == '#':
                     skipS += 1

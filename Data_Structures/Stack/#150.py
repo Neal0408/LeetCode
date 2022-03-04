@@ -3,33 +3,30 @@
 # 解题思路
 # 1.用栈作为辅助，遇到数字入栈，遇到符号出栈两个元素运算完后入栈。
 from typing import List
+import operator
 
 
 class Solution:
 
     def evalRPN(self, tokens: List[str]) -> int:
-        dic = {'+', '-', '*', '/'}
-        res = []
-        for i in tokens:
-            if i not in dic:
-                res.append(i)
-            elif i == '+':
-                B = int(res.pop())
-                A = int(res.pop())
-                res.append(A + B)
-            elif i == '-':
-                B = int(res.pop())
-                A = int(res.pop())
-                res.append(A - B)
-            elif i == '*':
-                B = int(res.pop())
-                A = int(res.pop())
-                res.append(A * B)
-            elif i == '/':
-                B = int(res.pop())
-                A = int(res.pop())
-                res.append(A / B)
-        return int(res[0])
+        op = {
+            "+": operator.add,
+            "-": operator.sub,
+            "*": operator.mul,
+            "/": lambda x, y: int(x / y),
+        }
+        stack = list()
+        for token in tokens:
+            try:
+                num = int(token)
+            except ValueError:
+                num2 = stack.pop()
+                num1 = stack.pop()
+                num = op[token](num1, num2)
+            finally:
+                stack.append(num)
+
+        return stack[0]
 
 
 obj = Solution()

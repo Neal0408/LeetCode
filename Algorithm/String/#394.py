@@ -1,14 +1,12 @@
 # 394.字符串解码
 # 给定一个经过编码的字符串，返回它解码后的字符串。
 # 解题思路
-# 1.找到中括号对应的东西，但是都不确定找不到找得到。这道题压根不会，不知道从哪里开始下手好。
-# 官方题解中第一个方法使用的是辅助站法。
-# 2.第二个是用递归法。
+# 1.这道题还是没办法完整的写出来。第一种方法是辅助栈法。
+# 2.第二种递归法。
 
 
 class Solution:
 
-    # 方法一 辅助站法
     def decodeString(self, s: str) -> str:
         stack, res, multi = [], "", 0
         for c in s:
@@ -24,7 +22,6 @@ class Solution:
                 res += c
         return res
 
-    # 方法二 递归法
     def decodeString2(self, s: str) -> str:
         def dfs(s, i):
             res, multi = "", 0

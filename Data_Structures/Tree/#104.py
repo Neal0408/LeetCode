@@ -18,6 +18,7 @@ class TreeNode:
 
 class Solution:
 
+    # 自底向上。递归。
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0
@@ -26,6 +27,7 @@ class Solution:
 
         return max(leftHeight, rightHeight) + 1
 
+    # 自顶向下。遍历。
     def dfs(self, root, cur):
         if not root:
             return 0
@@ -41,6 +43,7 @@ class Solution:
         self.depth = 0
         return self.dfs(root, cur)
 
+    # 层序遍历。
     def maxDepth3(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0

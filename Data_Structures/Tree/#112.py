@@ -34,13 +34,16 @@ class Solution:
         while que_node:
             node = que_node.pop(0)
             val = que_val.pop(0)
+            # 左右子树都为空则为叶子节点。
             if not node.left and not node.right:
                 if val == targetSum:
                     return True
                 continue
+            # 若左孩子存在则添加左孩子。
             if node.left:
                 que_node.append(node.left)
                 que_val.append(node.left.val + val)
+            # 若右孩子存在则添加右孩子。
             if node.right:
                 que_node.append(node.right)
                 que_val.append(node.right.val + val)

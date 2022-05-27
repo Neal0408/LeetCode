@@ -18,7 +18,7 @@ class Solution:
 
     def copyRandomList(self, head: 'Node') -> 'Node':
         if not head:
-            return
+            return head
         dic = {}
         cur = head
         while cur:

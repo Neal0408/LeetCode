@@ -14,10 +14,8 @@ class Solution:
     # 方法二 列表遍历拼接
     def reverseLeftWords2(self, s: str, n: int) -> str:
         res = []
-        for i in range(n, len(s)):
-            res.append(s[i])
-        for i in range(n):
-            res.append(s[i])
+        for i in range(n, n + len(s)):
+            res.append(s[i % len(s)])
         return ''.join(res)
 
 
